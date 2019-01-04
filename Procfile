@@ -1,1 +1,1 @@
-web: gunicorn myproject.wsgi
+web: gunicorn curip.wsgi --log-file -
