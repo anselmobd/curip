@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from pprint import pprint
 
 import django_heroku
 
@@ -24,11 +25,11 @@ ROOT_DIR = os.path.dirname(BASE_DIR)
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = '8pcppd-=62x28-_dh5u&xj8940n8)hczn5-gz38qphz=lxd&t#'
-
 SECRET_KEY = 'something'
-# if 'DJANGO_SECRET_KEY' not in os.environ or os.environ['DJANGO_SECRET_KEY'] is None:
-#     with open(os.path.join(ROOT_DIR, 'etc/secret_key.txt')) as f:
-#         SECRET_KEY = f.read().strip()
+
+if 'DJANGO_SECRET_KEY' not in os.environ:
+    with open(os.path.join(ROOT_DIR, 'etc/secret_key.txt')) as f:
+        SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
