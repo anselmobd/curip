@@ -13,7 +13,7 @@ class Trilha(models.Model):
 
 class Curso(models.Model):
     trilha = models.ForeignKey(
-        Trilha, on_delete=models.CASCADE, null=True, blank=True)
+        Trilha, on_delete=models.CASCADE)
     nome = models.CharField(
         max_length=100,
         verbose_name='Nome')
