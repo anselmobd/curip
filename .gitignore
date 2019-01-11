@@ -2,18 +2,3 @@
 *.pyc
 *.*~
 __pycache__
-
-# venv
-venv/
-
-# SQLite
-db_sqlite3/
-
-# Media
-media/
-
-# secret key
-etc/secret_key.txt
-
-# KB
-kb/
