@@ -9,4 +9,5 @@ class TrilhaAdmin(admin.ModelAdmin):
 
 @admin.register(Curso)
 class CursoAdmin(admin.ModelAdmin):
+    search_fields = ['trilha__nome', 'nome']
     pass
