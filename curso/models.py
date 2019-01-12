@@ -1,9 +1,17 @@
 from django.db import models
+from django.core.validators import MinValueValidator
+
 
 class Trilha(models.Model):
     nome = models.CharField(
         max_length=100,
         verbose_name='Nome')
+    meses = models.DecimalField(
+        'Duração (meses)',
+        max_digits=3,
+        decimal_places=1,
+        default=0,
+        validators=[MinValueValidator(0)])
 
     def __str__(self):
         return self.nome
