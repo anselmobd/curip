@@ -18,6 +18,13 @@ class Trilha(models.Model):
         'Idade inicial',
         default=11,
     )
+    material = models.DecimalField(
+        'Material Didádico',
+        max_digits=6,
+        decimal_places=2,
+        default=0,
+        validators=[MinValueValidator(0)]
+    )
 
     def __str__(self):
         return self.nome
