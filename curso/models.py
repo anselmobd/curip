@@ -39,6 +39,10 @@ class Curso(models.Model):
     nome = models.CharField(
         max_length=100,
     )
+    ordem = models.PositiveIntegerField(
+        'Ordem na trilha',
+        default=0,
+    )
     carga = models.PositiveIntegerField(
         'carga horária',
         default=0,
