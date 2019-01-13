@@ -7,6 +7,8 @@ from .models import Trilha, Curso
 class TrilhaAdmin(admin.ModelAdmin):
     search_fields = ['nome']
     ordering = ['nome']
+    list_display = ['__str__', 'meses', 'idade', 'material']
+    list_editable = ('meses', 'idade', 'material')
     pass
 
 
