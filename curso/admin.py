@@ -15,7 +15,8 @@ class TrilhaAdmin(admin.ModelAdmin):
 @admin.register(Curso)
 class CursoAdmin(admin.ModelAdmin):
     search_fields = ['trilha__nome', 'nome']
-    ordering = ['trilha__nome', 'nome']
-    list_display = ['__str__', 'carga', 'material', 'mensalidade', 'meses']
-    list_editable = ('carga', 'material', 'mensalidade', 'meses')
+    ordering = ['trilha__nome', 'ordem', 'nome']
+    list_display = [
+        '__str__', 'ordem', 'carga', 'material', 'mensalidade', 'meses']
+    list_editable = ('ordem', 'carga', 'material', 'mensalidade', 'meses')
     pass
