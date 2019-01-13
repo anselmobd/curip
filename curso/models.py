@@ -5,19 +5,26 @@ from django.core.validators import MinValueValidator
 class Trilha(models.Model):
     nome = models.CharField(
         max_length=100,
-        verbose_name='Nome')
+        verbose_name='Nome',
+    )
     meses = models.DecimalField(
         'Duração (meses)',
         max_digits=3,
         decimal_places=1,
         default=0,
-        validators=[MinValueValidator(0)])
+        validators=[MinValueValidator(0)]
+    )
+    idade = models.PositiveIntegerField(
+        'Idade inicial',
+        default=11,
+    )
 
     def __str__(self):
         return self.nome
 
     class Meta:
         db_table = "c_trilha"
+
 
 class Curso(models.Model):
     trilha = models.ForeignKey(
