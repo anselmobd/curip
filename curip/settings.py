@@ -29,7 +29,7 @@ ROOT_DIR = os.path.dirname(BASE_DIR)
 SECRET_KEY = 'something'
 
 if 'DJANGO_SECRET_KEY' not in os.environ:
-    with open(os.path.join(ROOT_DIR, 'etc/secret_key.txt')) as f:
+    with open(os.path.join(ROOT_DIR, 'etc', 'secret_key.txt')) as f:
         SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -131,7 +131,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = os.path.join('', 'static', '')
+
 # Necessário para o collectstatic
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
@@ -140,7 +141,7 @@ STATICFILES_DIRS = [
     # '/var/www/static/',
 ]
 
-MEDIA_URL = '/media/'
+MEDIA_URL = os.path.join('', 'media', '')
 
 MEDIA_ROOT = os.path.join(ROOT_DIR, "media")
 
