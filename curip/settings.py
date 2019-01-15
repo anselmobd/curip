@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-from pprint import pprint
+import locale
 
 import django_heroku
 
@@ -126,6 +126,10 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+USE_THOUSAND_SEPARATOR = True
+
+locale.setlocale(locale.LC_ALL, os.environ.get("LC_ALL", 'pt_BR.utf8'))
 
 
 # Static files (CSS, JavaScript, Images)
