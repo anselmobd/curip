@@ -16,3 +16,7 @@ class UF(models.Model):
 
     class Meta:
         db_table = "c_uf"
+
+    def save(self, *args, **kwargs):
+        self.sigla = self.sigla and self.sigla.upper()
+        super(UF, self).save(*args, **kwargs)
