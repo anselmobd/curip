@@ -1,0 +1,27 @@
+- {model: endereco.uf, fields: {sigla: AC, nome: Acre}}
+- {model: endereco.uf, fields: {sigla: AL, nome: Alagoas}}
+- {model: endereco.uf, fields: {sigla: AP, nome: Amapá}}
+- {model: endereco.uf, fields: {sigla: AM, nome: Amazonas}}
+- {model: endereco.uf, fields: {sigla: BA, nome: Bahia}}
+- {model: endereco.uf, fields: {sigla: CE, nome: Ceará}}
+- {model: endereco.uf, fields: {sigla: DF, nome: Distrito Federal}}
+- {model: endereco.uf, fields: {sigla: ES, nome: Espírito Santo}}
+- {model: endereco.uf, fields: {sigla: GO, nome: Goiás}}
+- {model: endereco.uf, fields: {sigla: MA, nome: Maranhão}}
+- {model: endereco.uf, fields: {sigla: MT, nome: Mato Grosso}}
+- {model: endereco.uf, fields: {sigla: MS, nome: Mato Grosso do Sul}}
+- {model: endereco.uf, fields: {sigla: MG, nome: Minas Gerais}}
+- {model: endereco.uf, fields: {sigla: PA, nome: Pará}}
+- {model: endereco.uf, fields: {sigla: PB, nome: Paraíba}}
+- {model: endereco.uf, fields: {sigla: PR, nome: Paraná}}
+- {model: endereco.uf, fields: {sigla: PE, nome: Pernambuco}}
+- {model: endereco.uf, fields: {sigla: PI, nome: Piauí}}
+- {model: endereco.uf, fields: {sigla: RJ, nome: Rio de Janeiro}}
+- {model: endereco.uf, fields: {sigla: RN, nome: Rio Grande do Norte}}
+- {model: endereco.uf, fields: {sigla: RS, nome: Rio Grande do Sul}}
+- {model: endereco.uf, fields: {sigla: RO, nome: Rondônia}}
+- {model: endereco.uf, fields: {sigla: RR, nome: Roraima}}
+- {model: endereco.uf, fields: {sigla: SC, nome: Santa Catarina}}
+- {model: endereco.uf, fields: {sigla: SP, nome: São Paulo}}
+- {model: endereco.uf, fields: {sigla: SE, nome: Sergipe}}
+- {model: endereco.uf, fields: {sigla: TO, nome: Tocantins}}
