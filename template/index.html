@@ -1,1 +1,12 @@
-oi
+{% extends 'layout/base.html' %}
+{% load static %}
+
+{% block content %}
+<div style="text-align:right">
+  <a href="/admin">Administração</a>
+</div>
+<div style="text-align:center">
+  <img src="{% static "img/curip100.jpg" %}" alt="Curip" height="100" width="100">
+  <h1>Curip</h1>
+</div>
+{% endblock content %}
