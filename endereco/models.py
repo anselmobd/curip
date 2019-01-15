@@ -1,10 +1,11 @@
 from django.db import models
+from django.core.validators import MinLengthValidator
 
 
 class UF(models.Model):
     sigla = models.CharField(
-        min_length=2,
         max_length=2,
+        validators=[MinLengthValidator(2)]
     )
     nome = models.CharField(
         max_length=60,
