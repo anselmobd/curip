@@ -19,6 +19,10 @@ from django.urls import path
 from .views import IndexView
 
 
+admin.site.site_header = "Administração Curip"
+admin.site.site_title = "Curip Admin"
+admin.site.index_title = "Cadastros"
+
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
 
