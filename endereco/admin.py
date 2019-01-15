@@ -3,10 +3,10 @@ import os
 from django.contrib import admin
 
 from curip import settings
-from .models import UF
+from .models import Uf
 
 
-@admin.register(UF)
+@admin.register(Uf)
 class UfAdmin(admin.ModelAdmin):
     search_fields = ['sigla', 'nome']
     ordering = ['sigla']

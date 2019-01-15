@@ -2,7 +2,7 @@ from django.db import models
 from django.core.validators import MinLengthValidator
 
 
-class UF(models.Model):
+class Uf(models.Model):
     sigla = models.CharField(
         max_length=2,
         validators=[MinLengthValidator(2)]
