@@ -3,7 +3,7 @@ import os
 from django.contrib import admin
 
 from curip import settings
-from .models import Uf
+from .models import Uf, Endereco
 
 
 @admin.register(Uf)
@@ -15,3 +15,8 @@ class UfAdmin(admin.ModelAdmin):
     class Media:
         static_url = getattr(settings, 'STATIC_URL', 'static')
         js = [os.path.join(static_url, 'admin', 'endereco', 'uf.js'), ]
+
+
+@admin.register(Endereco)
+class EnderecoAdmin(admin.ModelAdmin):
+    pass
