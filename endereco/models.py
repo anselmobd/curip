@@ -22,3 +22,30 @@ class Uf(models.Model):
     def save(self, *args, **kwargs):
         self.sigla = self.sigla and self.sigla.upper()
         super(UF, self).save(*args, **kwargs)
+
+
+class Endereco(models.Model):
+    cep = models.PositiveIntegerField(
+        'CEP',
+        default=0,
+    )
+    logradouro = models.CharField(
+        max_length=120,
+    )
+    numero = models.PositiveIntegerField(
+        'Número',
+        default=0,
+    )
+    complemento = models.CharField(
+        max_length=60,
+    )
+    bairro = models.CharField(
+        max_length=60,
+    )
+    cidade = models.CharField(
+        max_length=60,
+    )
+    uf = models.ForeignKey(
+        Uf, on_delete=models.PROTECT,
+        verbose_name='UF',
+    )
