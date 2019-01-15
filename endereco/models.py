@@ -1,3 +1,5 @@
+import re
+
 from django.db import models
 from django.core.validators import MinLengthValidator
 
@@ -38,9 +40,11 @@ class Endereco(models.Model):
     )
     complemento = models.CharField(
         max_length=60,
+        null=True, blank=True,
     )
     bairro = models.CharField(
         max_length=60,
+        null=True, blank=True,
     )
     cidade = models.CharField(
         max_length=60,
@@ -49,3 +53,14 @@ class Endereco(models.Model):
         Uf, on_delete=models.PROTECT,
         verbose_name='UF',
     )
+
+    def __str__(self):
+        cep = '{}-{}'.format(*(re.findall(r'\d{5}|\d{3}', str(self.cep))))
+        result = '{}; {:n}'.format(cep, self.numero)
+        if self.complemento is not None:
+            result = '; '.join([result, self.complemento])
+        return result
+
+    class Meta:
+        db_table = "c_endereco"
+        verbose_name = "Endereço"
