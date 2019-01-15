@@ -16,6 +16,8 @@ class UF(models.Model):
 
     class Meta:
         db_table = "c_uf"
+        verbose_name = "UF"
+        verbose_name_plural = "UFs"
 
     def save(self, *args, **kwargs):
         self.sigla = self.sigla and self.sigla.upper()
