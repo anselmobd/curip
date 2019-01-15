@@ -9,7 +9,6 @@ class TrilhaAdmin(admin.ModelAdmin):
     ordering = ['nome']
     list_display = ['__str__', 'meses', 'idade', 'material']
     list_editable = ('meses', 'idade', 'material')
-    pass
 
 
 @admin.register(Curso)
@@ -19,4 +18,3 @@ class CursoAdmin(admin.ModelAdmin):
     list_display = [
         '__str__', 'ordem', 'carga', 'material', 'mensalidade', 'meses']
     list_editable = ('ordem', 'carga', 'material', 'mensalidade', 'meses')
-    pass
