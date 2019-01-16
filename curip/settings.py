@@ -129,7 +129,7 @@ USE_TZ = True
 
 USE_THOUSAND_SEPARATOR = True
 
-locale.setlocale(locale.LC_ALL, os.environ.get("LC_ALL", 'en_GB.utf8'))
+locale.setlocale(locale.LC_ALL, os.environ.get("LC_ALL", 'pt_BR.UTF-8'))
 
 
 # Static files (CSS, JavaScript, Images)
