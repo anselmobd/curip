@@ -135,7 +135,7 @@ locale.setlocale(locale.LC_ALL, os.environ.get("LC_ALL", 'C.UTF-8'))
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = os.path.join('', 'static', '')
+STATIC_URL = '/static/'
 
 # Necessário para o collectstatic
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
@@ -145,7 +145,7 @@ STATICFILES_DIRS = [
     # '/var/www/static/',
 ]
 
-MEDIA_URL = os.path.join('', 'media', '')
+MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(ROOT_DIR, "media")
 
