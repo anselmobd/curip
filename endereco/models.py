@@ -23,7 +23,7 @@ class Uf(models.Model):
 
     def save(self, *args, **kwargs):
         self.sigla = self.sigla and self.sigla.upper()
-        super(UF, self).save(*args, **kwargs)
+        super().save(*args, **kwargs)
 
 
 class Endereco(models.Model):
